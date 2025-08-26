@@ -18,3 +18,41 @@ section {
 body {
   scroll-snap-type: y mandatory;
 }
+
+/* Slow pulse animation for gradients */
+@keyframes pulse-slow {
+  0% {
+    opacity: 0.2;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.3;
+    transform: scale(1.05);
+  }
+  100% {
+    opacity: 0.2;
+    transform: scale(1);
+  }
+}
+
+.animate-pulse-slow {
+  animation: pulse-slow 8s ease-in-out infinite;
+}
+
+.animate-pulse-slow-delayed {
+  animation: pulse-slow 8s ease-in-out infinite 2s; /* Delayed start for layering effect */
+}
+
+/* Subtle grid slide animation */
+@keyframes grid-slide {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 50px 50px;
+  }
+}
+
+.animate-grid-slide {
+  animation: grid-slide 20s linear infinite;
+}
